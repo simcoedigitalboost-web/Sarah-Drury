@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Why use a mortgage broker instead of a bank? Sarah Drury explains the benefits of working with an independent mortgage agent in Simcoe County.">
+    <title>Why Use a Mortgage Broker | Sarah Drury | Orillia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .compare-section {
+            background: var(--white);
+            padding: 5rem 0;
+        }
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .compare-card {
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+        }
+        .compare-card.bank {
+            background: var(--cream);
+            border: 2px solid var(--light-gray);
+        }
+        .compare-card.broker {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            color: var(--white);
+            box-shadow: 0 20px 60px rgba(107, 143, 113, 0.3);
+        }
+        .compare-card.broker::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--terracotta);
+            color: var(--white);
+            padding: 0.4rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+        .compare-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+        .compare-card.broker h3 {
+            color: var(--white);
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        .compare-list {
+            list-style: none;
+        }
+        .compare-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        .compare-list li::before {
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+        }
+        .compare-card.bank .compare-list li::before {
+            content: '✕';
+            color: var(--terracotta);
+        }
+        .compare-card.broker .compare-list li::before {
+            content: '✓';
+            color: var(--gold);
+        }
+        .compare-card.broker .compare-list li {
+            color: rgba(255,255,255,0.9);
+        }
+        .benefit-blocks {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        .benefit-block {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        .benefit-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--terracotta), var(--gold));
+        }
+        .benefit-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--sage-light);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .benefit-block h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+        .benefit-block p {
+            color: var(--warm-gray);
+            line-height: 1.8;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .compare-grid,
+            .benefit-blocks {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sarah <span>Drury</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="services/first-time-buyers.html">First-Time Buyers</a>
+                        <a href="services/refinancing.html">Refinancing</a>
+                        <a href="services/renewals.html">Mortgage Renewals</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="faq.html">FAQ</a>
+                        <a href="why-broker.html">Why Use a Broker</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Areas Served</a>
+                    <div class="dropdown-content">
+                        <a href="areas/orillia.html">Orillia</a>
+                        <a href="areas/barrie.html">Barrie</a>
+                        <a href="areas/midland.html">Midland</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="btn-nav">Free Consultation</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Why Use a Mortgage Broker?</h1>
+        <p>Your bank works for themselves. I work for you. Here's why that matters.</p>
+    </header>
+
+    <section class="content-section">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">The Difference Is Simple</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--warm-gray); max-width: 700px; margin: 0 auto 3rem;">When you walk into a bank, you get their products at their rates. When you work with me, you get access to 50+ lenders competing for your business. Same mortgage, different approach, potentially thousands of dollars in savings.</p>
+        </div>
+    </section>
+
+    <section class="compare-section">
+        <div class="container">
+            <div class="compare-grid">
+                <div class="compare-card bank">
+                    <h3>Going to Your Bank</h3>
+                    <ul class="compare-list">
+                        <li>Limited to one lender's products</li>
+                        <li>Take it or leave it rate offers</li>
+                        <li>Branch hours and wait times</li>
+                        <li>Staff may rotate frequently</li>
+                        <li>One-size-fits-all approach</li>
+                        <li>May not see your full picture</li>
+                        <li>Incentivized to sell bank products</li>
+                    </ul>
+                </div>
+                <div class="compare-card broker">
+                    <h3>Working With Me</h3>
+                    <ul class="compare-list">
+                        <li>Access to 50+ lenders</li>
+                        <li>Lenders compete for your business</li>
+                        <li>Available when you need me</li>
+                        <li>One point of contact throughout</li>
+                        <li>Solutions tailored to your situation</li>
+                        <li>I see your complete financial picture</li>
+                        <li>Incentivized to find you the best deal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Real Benefits</h2>
+                <p>Beyond just rate shopping, here's what working with a mortgage broker actually means for you.</p>
+            </div>
+
+            <div class="benefit-blocks">
+                <div class="benefit-block">
+                    <div class="benefit-number">01</div>
+                    <h3>Better Rates, Period</h3>
+                    <p>I have access to rates you won't find walking into a bank branch. Lenders offer brokers preferred pricing because we bring them volume. That savings goes directly to you.</p>
+                </div>
+
+                <div class="benefit-block">
+                    <div class="benefit-number">02</div>
+                    <h3>One Application, Many Lenders</h3>
+                    <p>Instead of applying separately at multiple banks, you fill out one application with me. I shop it across my network and bring you the best options. Less paperwork, less hassle, better results.</p>
+                </div>
+
+                <div class="benefit-block">
+                    <div class="benefit-number">03</div>
+                    <h3>Expert Navigation</h3>
+                    <p>Self-employed? Bruised credit? Unique property? I know which lenders specialize in different situations. Instead of getting declined and trying somewhere else, I send your file to the right place the first time.</p>
+                </div>
+
+                <div class="benefit-block">
+                    <div class="benefit-number">04</div>
+                    <h3>Someone in Your Corner</h3>
+                    <p>Bank employees have sales targets for their products. I have one goal: finding you the best mortgage. My success depends on your satisfaction and referrals, so my interests are aligned with yours.</p>
+                </div>
+
+                <div class="benefit-block">
+                    <div class="benefit-number">05</div>
+                    <h3>The Fine Print Matters</h3>
+                    <p>Two mortgages with the same rate can be very different products. I look at prepayment privileges, portability, penalties, and flexibility—the details that matter when life changes.</p>
+                </div>
+
+                <div class="benefit-block">
+                    <div class="benefit-number">06</div>
+                    <h3>Usually Free to You</h3>
+                    <p>For most residential mortgages, my services cost you nothing. The lender pays my fee when your mortgage closes. You get expert help at no cost—that's a pretty good deal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--sage-light); padding: 5rem 0;">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">But Won't My Bank Match Any Offer?</h2>
+            <p style="font-size: 1.15rem; color: var(--warm-gray); line-height: 1.85; margin-bottom: 1.5rem;">Sometimes they will, sometimes they won't. But here's what most people don't realize: getting your bank to match a rate still leaves money on the table.</p>
+            <p style="font-size: 1.15rem; color: var(--warm-gray); line-height: 1.85; margin-bottom: 1.5rem;">First, you have to do all the legwork yourself—getting quotes, comparing terms, going back and forth. That takes time and energy.</p>
+            <p style="font-size: 1.15rem; color: var(--warm-gray); line-height: 1.85; margin-bottom: 1.5rem;">Second, rate is just one factor. Your bank might match the rate but not the terms. Things like prepayment options, penalty calculations, and flexibility can cost or save you thousands down the road.</p>
+            <p style="font-size: 1.15rem; color: var(--warm-gray); line-height: 1.85;">Third, why negotiate alone when you can have an expert do it for you—for free? That's literally my job.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <h2 style="margin-bottom: 2rem;">The Bottom Line</h2>
+            <p style="font-size: 1.25rem; color: var(--warm-gray); line-height: 1.85; margin-bottom: 2rem;">Your mortgage is probably the biggest financial commitment you'll ever make. It deserves more than a 15-minute conversation at your local branch. It deserves someone who will fight for the best deal, explain your options clearly, and guide you through the process from start to finish.</p>
+            <p style="font-size: 1.25rem; color: var(--warm-gray); line-height: 1.85;">That's what I do. And I'd love to do it for you.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to See the Difference?</h2>
+        <p>Let's have a conversation about your mortgage. I'll show you what's really out there—and what you could be saving.</p>
+        <a href="contact.html" class="btn btn-primary">Book Your Free Consultation</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Sarah <span>Drury</span></a>
+                    <p>Mortgage Agent Level 1 with Dominion Lending Centres Elite Mortgage Group. Lic# 13669. Helping Simcoe County families make smarter mortgage decisions.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="services/refinancing.html">Refinancing</a></li>
+                        <li><a href="services/renewals.html">Mortgage Renewals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Areas Served</h4>
+                    <ul>
+                        <li><a href="areas/orillia.html">Orillia</a></li>
+                        <li><a href="areas/barrie.html">Barrie</a></li>
+                        <li><a href="areas/midland.html">Midland</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="tel:+1XXXXXXXXXX">Call Me</a></li>
+                        <li><a href="mailto:sarah@example.com">Email Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Sarah Drury. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

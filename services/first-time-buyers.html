@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="First-time home buyer mortgage help in Orillia and Simcoe County. Learn about grants, rebates, and programs that could save you up to $40,000 on your first home.">
+    <title>First-Time Home Buyer Mortgages | Sarah Drury | Orillia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .savings-banner {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            padding: 4rem 0;
+            margin: -2rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .savings-banner::before {
+            content: '$';
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 300px;
+            color: rgba(255,255,255,0.08);
+            line-height: 1;
+        }
+        .savings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .savings-item {
+            color: var(--white);
+        }
+        .savings-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .savings-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.85;
+        }
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .program-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 4px solid var(--terracotta);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .program-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--charcoal);
+        }
+        .program-card p {
+            color: var(--warm-gray);
+            margin: 0;
+            line-height: 1.7;
+        }
+        @media (max-width: 768px) {
+            .savings-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .savings-amount {
+                font-size: 3rem;
+            }
+            .program-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Sarah <span>Drury</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../reviews.html">Reviews</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="first-time-buyers.html">First-Time Buyers</a>
+                        <a href="refinancing.html">Refinancing</a>
+                        <a href="renewals.html">Mortgage Renewals</a>
+                        <a href="self-employed.html">Self-Employed</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="../faq.html">FAQ</a>
+                        <a href="../why-broker.html">Why Use a Broker</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Areas Served</a>
+                    <div class="dropdown-content">
+                        <a href="../areas/orillia.html">Orillia</a>
+                        <a href="../areas/barrie.html">Barrie</a>
+                        <a href="../areas/midland.html">Midland</a>
+                    </div>
+                </li>
+                <li><a href="../contact.html" class="btn-nav">Free Consultation</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>First-Time Home Buyers</h1>
+        <p>You could save up to $40,000 on your first home—if you know where to look. Most people don't. I'll show you.</p>
+    </header>
+
+    <section class="savings-banner">
+        <div class="container">
+            <div class="savings-grid">
+                <div class="savings-item">
+                    <div class="savings-amount">$40,000+</div>
+                    <div class="savings-label">Potential Total Savings</div>
+                </div>
+                <div class="savings-item">
+                    <div class="savings-amount">$15,000</div>
+                    <div class="savings-label">Down Payment Assistance</div>
+                </div>
+                <div class="savings-item">
+                    <div class="savings-amount">$10,000</div>
+                    <div class="savings-label">Home Warranty Value</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-main">
+                    <h2>Most First-Time Buyers Leave Money on the Table</h2>
+                    <p>Here's what usually happens: you walk into a bank, they run some numbers, and they offer you a mortgage. You assume that's the best you can do. You sign. Done.</p>
+                    <p>But here's what you don't see: there are grants, rebates, incentives, and programs specifically designed to help first-time buyers—and most people never hear about them. Between government programs, lender incentives, and tax breaks, you could be looking at <strong>$40,000 or more in savings</strong> over the life of your mortgage.</p>
+                    <p>That's not an exaggeration. That's what happens when you know where to look.</p>
+
+                    <h2>Programs You Need to Know About</h2>
+                    
+                    <div class="program-cards">
+                        <div class="program-card">
+                            <h4>First-Time Home Buyer Incentive</h4>
+                            <p>The government provides 5-10% of your home's purchase price toward your down payment as a shared equity mortgage. This reduces your monthly payments without you having to save more upfront.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>First Home Savings Account (FHSA)</h4>
+                            <p>A tax-free savings account specifically for your down payment. Contributions are tax-deductible (like an RRSP) and withdrawals for your home are tax-free (like a TFSA). Best of both worlds.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>Home Buyers' Plan (HBP)</h4>
+                            <p>Withdraw up to $35,000 from your RRSP tax-free to put toward your down payment. Couples can each withdraw $35,000—that's $70,000 from your retirement savings to get into your home now.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>Land Transfer Tax Rebate</h4>
+                            <p>Ontario first-time buyers can get a rebate of up to $4,000 on land transfer tax. That's money back in your pocket at closing.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>Down Payment Assistance Programs</h4>
+                            <p>Various programs exist to help buyers who don't have a full down payment saved. I'll help you find out if you qualify and guide you through the application process.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>Cash-Back Mortgages</h4>
+                            <p>Some lenders offer cash back at closing—money you can use for moving costs, furniture, or immediate renovations. I know which lenders offer the best cash-back deals.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>Home Warranty Programs</h4>
+                            <p>Qualify for free home warranty coverage worth up to $10,000, protecting you against unexpected repairs in your first years of ownership.</p>
+                        </div>
+                        <div class="program-card">
+                            <h4>New to Canada Program</h4>
+                            <p>Recently immigrated? Special mortgage programs exist for newcomers with limited Canadian credit history. You can qualify with as little as 5% down.</p>
+                        </div>
+                    </div>
+
+                    <h2>What I Actually Do for First-Time Buyers</h2>
+                    <p>Beyond finding you the best rate (which I will), here's what working with me looks like:</p>
+                    <ul>
+                        <li><strong>Identify every program you qualify for</strong> — I'll go through your situation and make sure you're not missing any grants, rebates, or incentives</li>
+                        <li><strong>Get you pre-approved</strong> — Know exactly what you can afford before you start house hunting, so you can move fast when you find the right place</li>
+                        <li><strong>Explain the stress test</strong> — Current rules mean you have to qualify at a higher rate than you'll actually pay. I'll explain how this works and what it means for your budget</li>
+                        <li><strong>Help with your credit score</strong> — If your score needs work, I'll give you specific tips to improve it before we apply</li>
+                        <li><strong>Compare mortgage insurance options</strong> — Bank mortgage insurance vs. independent life insurance—there's a big difference, and I'll explain which makes sense for you</li>
+                        <li><strong>Guide you through closing</strong> — The paperwork, the timing, the lawyer stuff—I handle the coordination so you don't have to stress</li>
+                    </ul>
+
+                    <h2>Down Payment: What You Actually Need</h2>
+                    <p>The 20% down payment myth stops a lot of people from even trying to buy. Here's the reality:</p>
+                    <ul>
+                        <li><strong>Under $500,000:</strong> Minimum 5% down</li>
+                        <li><strong>$500,000 to $999,999:</strong> 5% on first $500K, 10% on the rest</li>
+                        <li><strong>$1 million and up:</strong> 20% minimum</li>
+                    </ul>
+                    <p>So for a $400,000 home, you could get in with $20,000 down. Combine that with the Home Buyers' Plan and down payment assistance programs, and homeownership might be closer than you think.</p>
+
+                    <h2>Understanding the Stress Test</h2>
+                    <p>You've probably heard about the mortgage stress test. Here's what it means: even if you're getting a mortgage at 5%, you have to prove you could afford payments at around 7% (the qualifying rate changes periodically).</p>
+                    <p>This affects how much you can borrow. The good news? I can run these numbers for you before you start shopping, so you know your real budget—not what online calculators tell you.</p>
+
+                    <h2>Credit Score: Where You Need to Be</h2>
+                    <p>Most A-lenders want to see a credit score of at least 620-680. If you're below that, we still have options—but the best rates require good credit.</p>
+                    <p>If your score needs work, don't worry. I'll give you specific, actionable tips to improve it. Sometimes a few months of targeted effort can make a significant difference in what rates you qualify for.</p>
+
+                    <h2>The Process: Step by Step</h2>
+                    <p><strong>Step 1: We Talk.</strong> Tell me about your situation—income, savings, goals, timeline. I'll give you an honest assessment of where you stand and what programs you qualify for.</p>
+                    <p><strong>Step 2: Pre-Approval.</strong> I'll get you pre-approved so you know your exact budget. This also shows sellers you're serious when you make an offer.</p>
+                    <p><strong>Step 3: House Hunting.</strong> You find the place you love. I'm here for questions along the way—how different prices affect your payments, what conditions mean for financing, etc.</p>
+                    <p><strong>Step 4: Final Approval.</strong> Once your offer is accepted, we finalize everything. I handle the paperwork and lender communication.</p>
+                    <p><strong>Step 5: You Get the Keys.</strong> Closing day. You're a homeowner. I make sure there are no surprises.</p>
+                </div>
+                <div>
+                    <div class="sidebar-cta">
+                        <h3>Ready to Get Started?</h3>
+                        <p>A quick conversation can show you exactly what programs you qualify for and how much you could save. No pressure, no obligation.</p>
+                        <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Book Free Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Your First Home Is Closer Than You Think</h2>
+        <p>Between grants, rebates, and programs you probably don't know about, thousands of dollars are waiting to be claimed. Let's make sure you don't leave any of it on the table.</p>
+        <a href="../contact.html" class="btn btn-primary">Let's Talk</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">Sarah <span>Drury</span></a>
+                    <p>Mortgage Agent Level 1 with Dominion Lending Centres Elite Mortgage Group. Lic# 13669. Helping Simcoe County families make smarter mortgage decisions.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="refinancing.html">Refinancing</a></li>
+                        <li><a href="renewals.html">Mortgage Renewals</a></li>
+                        <li><a href="self-employed.html">Self-Employed</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Areas Served</h4>
+                    <ul>
+                        <li><a href="../areas/orillia.html">Orillia</a></li>
+                        <li><a href="../areas/barrie.html">Barrie</a></li>
+                        <li><a href="../areas/midland.html">Midland</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="../contact.html">Get in Touch</a></li>
+                        <li><a href="tel:+1XXXXXXXXXX">Call Me</a></li>
+                        <li><a href="mailto:sarah@example.com">Email Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Sarah Drury. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

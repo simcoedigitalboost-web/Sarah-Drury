@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about mortgages in Orillia and Simcoe County. Sarah Drury answers common questions about rates, down payments, and the mortgage process.">
+    <title>Mortgage FAQ | Sarah Drury | Orillia Mortgage Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .faq-item {
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            padding: 1.75rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            color: var(--terracotta);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.75rem;
+            font-weight: 300;
+            color: var(--terracotta);
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        .faq-answer-inner {
+            padding: 0 2rem 2rem;
+            color: var(--warm-gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .faq-category {
+            margin-top: 4rem;
+        }
+        .faq-category:first-child {
+            margin-top: 0;
+        }
+        .faq-category h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--sage-light);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sarah <span>Drury</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="services/first-time-buyers.html">First-Time Buyers</a>
+                        <a href="services/refinancing.html">Refinancing</a>
+                        <a href="services/renewals.html">Mortgage Renewals</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="faq.html">FAQ</a>
+                        <a href="why-broker.html">Why Use a Broker</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Areas Served</a>
+                    <div class="dropdown-content">
+                        <a href="areas/orillia.html">Orillia</a>
+                        <a href="areas/barrie.html">Barrie</a>
+                        <a href="areas/midland.html">Midland</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="btn-nav">Free Consultation</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Got questions? I've got answers. Here's what people ask me most often.</p>
+    </header>
+
+    <section class="content-section">
+        <div class="container" style="max-width: 900px;">
+            
+            <div class="faq-category">
+                <h2>Getting Started</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What does a mortgage agent actually do?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            I work for you, not a bank. Instead of offering you just one lender's products, I shop your mortgage across dozens of lenders to find the best rate and terms for your specific situation. I handle the paperwork, communicate with lenders, and guide you through the entire process. Think of me as your mortgage advocate—someone in your corner making sure you don't overpay.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How much does it cost to use your services?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            For most clients, my services are completely free. I'm paid by the lender when your mortgage closes—not by you. In some cases involving alternative lenders or complex situations, there may be a broker fee, but I'll always discuss this with you upfront before you commit to anything. No surprises.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Why should I use a mortgage agent instead of going to my bank?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Your bank can only offer you their products. I have access to over 50 lenders—including your bank. This means I can compare rates across the market and find options you'd never see walking into a single branch. I also know which lenders are offering the best deals right now, which ones are flexible on specific issues, and how to present your application for the best chance of approval. It's like having an insider on your side.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Down Payments & Affordability</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How much do I need for a down payment?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            In Canada, the minimum down payment depends on the purchase price. For homes under $500,000, you need at least 5% down. For homes between $500,000 and $999,999, you need 5% on the first $500K and 10% on the portion above that. For homes $1 million and over, you need 20% down. There are also programs that can help with your down payment—let's talk about what might work for your situation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What credit score do I need to get a mortgage?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Most A-lenders (banks and major lenders) look for a credit score of at least 620-680. However, if your score is lower, there are still options. B-lenders and alternative lenders work with lower credit scores, often down to 500 or even lower in some cases. The rate and terms will vary, but having less-than-perfect credit doesn't mean you can't get a mortgage. Let me take a look at your situation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I know how much I can afford?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            That's one of the first things we figure out together. I'll look at your income, debts, down payment, and current rates to determine what you can qualify for. But I'll also help you think about what you should borrow—which isn't always the same as what you can borrow. Your mortgage should fit your life, not stretch you to the breaking point. A pre-approval conversation will give you a clear picture.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>Rates & Terms</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Should I choose a fixed or variable rate?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            It depends on your risk tolerance and the current rate environment. Fixed rates give you certainty—your payment stays the same for the term. Variable rates can save you money if rates stay flat or drop, but your payment can increase if rates rise. Historically, variable rates have often worked out better over the long run, but that's not guaranteed. I'll walk you through the current numbers and help you make an informed decision based on your situation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between term and amortization?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Your amortization is the total length of time to pay off your mortgage—typically 25 or 30 years. Your term is how long your current rate and conditions are locked in—commonly 5 years, but ranging from 1 to 10 years. At the end of each term, you renew (or refinance) for another term until the amortization is complete. Think of the term as chapters in a book, and the amortization as the whole book.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I pay off my mortgage faster?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes, most mortgages include prepayment privileges that let you pay extra without penalty—typically 10-20% of the original principal per year, plus the ability to increase your regular payments. These privileges vary by lender, and I always make sure your mortgage has good prepayment options. Small extra payments can shave years off your mortgage and save thousands in interest.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h2>The Process</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">What documents do I need to apply for a mortgage?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            The basics include: government-issued ID, proof of income (pay stubs, T4s, or tax returns if self-employed), proof of down payment, and information about your debts and assets. If you're purchasing, you'll also need the Agreement of Purchase and Sale. Don't worry—I'll give you a clear checklist and walk you through exactly what's needed. It's simpler than it sounds.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How long does the mortgage process take?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Pre-approval can often happen within 24-48 hours. Once you have an accepted offer on a home, final approval typically takes 3-5 business days, assuming all documents are in order. The full process from application to closing depends on your closing date, but I keep things moving and make sure there are no surprises along the way.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between pre-qualification and pre-approval?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Pre-qualification is a quick estimate based on information you provide—it's a ballpark figure but doesn't carry much weight. Pre-approval is more thorough: I verify your income, check your credit, and get actual approval from a lender for a specific amount. Pre-approval shows sellers you're a serious buyer and gives you confidence about your budget. I recommend getting pre-approved before you start house hunting.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Still Have Questions?</h2>
+        <p>Every situation is unique. Let's have a conversation about yours—no pressure, no obligation.</p>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Sarah <span>Drury</span></a>
+                    <p>Mortgage Agent Level 1 with Dominion Lending Centres Elite Mortgage Group. Lic# 13669. Helping Simcoe County families make smarter mortgage decisions.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="services/refinancing.html">Refinancing</a></li>
+                        <li><a href="services/renewals.html">Mortgage Renewals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Areas Served</h4>
+                    <ul>
+                        <li><a href="areas/orillia.html">Orillia</a></li>
+                        <li><a href="areas/barrie.html">Barrie</a></li>
+                        <li><a href="areas/midland.html">Midland</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="tel:+1XXXXXXXXXX">Call Me</a></li>
+                        <li><a href="mailto:sarah@example.com">Email Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Sarah Drury. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Mobile Navigation -->
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

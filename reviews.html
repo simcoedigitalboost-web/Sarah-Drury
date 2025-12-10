@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read reviews from Sarah Drury's mortgage clients across Simcoe County. 5-star rated Orillia mortgage agent with 24+ Google reviews.">
+    <title>Client Reviews | Sarah Drury | Orillia Mortgage Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .reviews-hero {
+            background: var(--sage);
+            padding: 12rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .reviews-hero::before {
+            content: '"';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Playfair Display', serif;
+            font-size: 500px;
+            color: rgba(255,255,255,0.08);
+            line-height: 1;
+            pointer-events: none;
+        }
+        .reviews-hero h1 {
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+        .reviews-hero p {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 1rem auto 0;
+            position: relative;
+            z-index: 2;
+        }
+        .rating-summary {
+            background: var(--white);
+            max-width: 500px;
+            margin: -3rem auto 4rem;
+            padding: 2.5rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        .rating-big {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .rating-stars {
+            color: var(--gold);
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+        }
+        .rating-count {
+            color: var(--warm-gray);
+            font-size: 1.1rem;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+        .review-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            position: relative;
+        }
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--sage-light);
+            line-height: 1;
+        }
+        .review-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.25rem;
+        }
+        .review-text {
+            font-size: 1.1rem;
+            line-height: 1.85;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .review-meta strong {
+            display: block;
+            color: var(--charcoal);
+            font-size: 1rem;
+        }
+        .review-meta span {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+        }
+        .review-card.featured {
+            grid-column: span 2;
+            background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
+            color: var(--white);
+        }
+        .review-card.featured::before {
+            color: rgba(255,255,255,0.15);
+        }
+        .review-card.featured .review-stars {
+            color: var(--gold);
+        }
+        .review-card.featured .review-text {
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        .review-card.featured .review-meta strong {
+            color: var(--white);
+        }
+        .review-card.featured .review-meta span {
+            color: rgba(255,255,255,0.7);
+        }
+        .google-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--warm-gray);
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .review-card.featured {
+                grid-column: span 1;
+            }
+            .rating-big {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sarah <span>Drury</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="services/first-time-buyers.html">First-Time Buyers</a>
+                        <a href="services/refinancing.html">Refinancing</a>
+                        <a href="services/renewals.html">Mortgage Renewals</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="faq.html">FAQ</a>
+                        <a href="why-broker.html">Why Use a Broker</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Areas Served</a>
+                    <div class="dropdown-content">
+                        <a href="areas/orillia.html">Orillia</a>
+                        <a href="areas/barrie.html">Barrie</a>
+                        <a href="areas/midland.html">Midland</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="btn-nav">Free Consultation</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="reviews-hero">
+        <h1>Client Reviews</h1>
+        <p>Don't just take my word for it. Here's what real clients across Simcoe County have to say.</p>
+    </header>
+
+    <div class="rating-summary">
+        <div class="rating-big">5.0</div>
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-count">Based on 24+ Google Reviews</div>
+    </div>
+
+    <section class="container" style="padding-bottom: 5rem;">
+        <div class="reviews-grid">
+            
+            <div class="review-card featured">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"She truly cares about her clients and does everything she can for them. Sarah went above and beyond to make sure we got the best rate possible. She was always available to answer our questions, no matter how small. If you are in need of a mortgage, I would highly recommend Sarah!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">M</div>
+                    <div class="review-meta">
+                        <strong>Michelle</strong>
+                        <span>First-Time Buyer, Orillia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Sarah made the whole process seamless. She explains everything clearly and is always available to answer questions. Couldn't have asked for a better experience buying our first home."</p>
+                <div class="review-author">
+                    <div class="review-avatar">J</div>
+                    <div class="review-meta">
+                        <strong>Jordan & Taylor</strong>
+                        <span>First-Time Buyers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Exceptional service from start to finish. Sarah found us a rate that our bank couldn't match and made the refinancing process incredibly smooth. Highly recommend!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">R</div>
+                    <div class="review-meta">
+                        <strong>Rob</strong>
+                        <span>Refinance Client, Barrie</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"We were nervous about the mortgage process but Sarah put us at ease immediately. She explained every step and fought hard to get us approved. So grateful we found her!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">A</div>
+                    <div class="review-meta">
+                        <strong>Amanda & Chris</strong>
+                        <span>First-Time Buyers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Sarah saved us thousands on our renewal. We almost just signed our bank's offer, but she showed us what was really out there. So glad we made that call."</p>
+                <div class="review-author">
+                    <div class="review-avatar">D</div>
+                    <div class="review-meta">
+                        <strong>Dave</strong>
+                        <span>Renewal Client, Orillia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Professional, knowledgeable, and genuinely caring. Sarah took the time to understand our unique situation and found solutions we didn't know existed. Five stars isn't enough!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">S</div>
+                    <div class="review-meta">
+                        <strong>Samantha</strong>
+                        <span>Midland</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"After being turned down by our bank, Sarah found a lender who approved us with great terms. She never gave up on us. Can't thank her enough for making our dream home a reality."</p>
+                <div class="review-author">
+                    <div class="review-avatar">K</div>
+                    <div class="review-meta">
+                        <strong>Kevin & Lisa</strong>
+                        <span>First-Time Buyers</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Quick, efficient, and always kept us in the loop. Sarah made buying our cottage property stress-free. Would recommend to anyone looking for a mortgage in the area."</p>
+                <div class="review-author">
+                    <div class="review-avatar">P</div>
+                    <div class="review-meta">
+                        <strong>Peter</strong>
+                        <span>Cottage Purchase</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <div class="google-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Reviews from Google</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Be My Next Success Story?</h2>
+        <p>Join the growing list of happy homeowners across Simcoe County. Let's talk about your mortgage goals.</p>
+        <a href="contact.html" class="btn btn-primary">Get Your Free Consultation</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Sarah <span>Drury</span></a>
+                    <p>Mortgage Agent Level 1 with Dominion Lending Centres Elite Mortgage Group. Lic# 13669. Helping Simcoe County families make smarter mortgage decisions.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="services/refinancing.html">Refinancing</a></li>
+                        <li><a href="services/renewals.html">Mortgage Renewals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Areas Served</h4>
+                    <ul>
+                        <li><a href="areas/orillia.html">Orillia</a></li>
+                        <li><a href="areas/barrie.html">Barrie</a></li>
+                        <li><a href="areas/midland.html">Midland</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="tel:+1XXXXXXXXXX">Call Me</a></li>
+                        <li><a href="mailto:sarah@example.com">Email Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 Sarah Drury. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <script>
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.nav-links a:not(.dropdown > a)').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
